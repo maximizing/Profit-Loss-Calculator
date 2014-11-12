@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtcal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal3"
+        android:layout_marginTop="27dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal4"
+        android:layout_marginTop="28dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal5"
+        android:layout_marginTop="28dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal1"
+        android:layout_marginTop="21dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal2"
+        android:layout_marginTop="26dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal6"
+        android:layout_marginTop="30dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/txtcal7"
+        android:layout_marginTop="28dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcal2"
+        android:layout_alignBottom="@+id/txtcal2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="21dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcal3"
+        android:layout_alignBottom="@+id/txtcal3"
+        android:layout_alignLeft="@+id/txtcal10"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcal4"
+        android:layout_alignBottom="@+id/txtcal4"
+        android:layout_alignLeft="@+id/txtcal11"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcal5"
+        android:layout_alignBottom="@+id/txtcal5"
+        android:layout_alignLeft="@+id/txtcal12"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtcal6"
+        android:layout_alignLeft="@+id/txtcal13"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtcal7"
+        android:layout_alignRight="@+id/txtcal14"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/btnlow"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnup"
+        android:layout_alignBottom="@+id/btnup"
+        android:layout_alignRight="@+id/btnclose"
+        android:text="ต่ำลง" />
+
+    <Button
+        android:id="@+id/btnclose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnback"
+        android:layout_alignBottom="@+id/btnback"
+        android:layout_toRightOf="@+id/btnup"
+        android:text="Close" />
+
+    <Button
+        android:id="@+id/btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toLeftOf="@+id/btnup"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/btnup"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnclose"
+        android:layout_centerHorizontal="true"
+        android:text="สูงขึ้น" />
+
+    <TextView
+        android:id="@+id/txtcal9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnup"
+        android:layout_alignBottom="@+id/btnup"
+        android:layout_alignParentLeft="true"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtcal16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtcal8"
+        android:layout_alignBottom="@+id/txtcal8"
+        android:layout_alignLeft="@+id/txtcal15"
+        android:text="TextView" />
+
+</RelativeLayout>
