@@ -17,7 +17,7 @@ public class Calculated extends Activity implements OnClickListener {
 	private Integer e1;
 	private TextView t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13,
 			t14, t15, t16;
-	private Button btnup, btnlow,btnback,btnclose;
+	private Button btnup, btnlow, btnback, btnclose;
 	private double c = 0;
 	private double cc = 0;
 
@@ -78,21 +78,22 @@ public class Calculated extends Activity implements OnClickListener {
 
 	private Double Calc(double c2, double cc2) {
 
-		con = (float) 53.50;
+		con = (float) 53.50; //ชำระค่าส่งคำสั่ง
 		gete1 = getIntent().getStringExtra("e1");
 		gete2 = getIntent().getStringExtra("e2");
 		gete3 = getIntent().getStringExtra("e3");
 		e1 = Integer.parseInt(gete1);
 		e2 = Double.valueOf(gete2).doubleValue();
 		e3 = Double.valueOf(gete3).doubleValue();
-		result1 = e1 * e2;
-		result2 = e1 * (e3 + c2);
-		// result2 = e1*(e3+update1);
-		cost1 = result1 + con;
-		// cost2 = result2-(con+update2);
-		cost2 = result2 - con;
-		baht = cost1 - (cost2 + cc2);
-		percent = (baht / cost1) * 100;
+
+		e3 = e3 + c2;
+		result1 = e1 * e2; //มูลค่าซื้อ
+		result2 = e1 * e3; //มูลค่าขาย
+		cost1 = result1 + con; //รวมต้นทุนค่าซื้อ
+		cost2 = result2 - con; //รวมต้นทุนค่าขาย
+		cost2 = cost2 - cc2;
+		baht = cost1 - cost2; //เปลี่ยนแปลงราคาขาย
+		percent = (baht / cost1) * 100; 
 
 		t1.setText("ผลการคำควณ: ");
 		t2.setText("มูลค่าซื้อ:    " + e1 + " x " + e2 + "  =     ");
@@ -107,8 +108,8 @@ public class Calculated extends Activity implements OnClickListener {
 		t14.setText("" + con);
 		t7.setText("คิดเป็นค่าขายสุทธิ:   ");
 		t15.setText("" + cost2);
-		t8.setText("ขาดทุน                                " + percent
-				+ "% หรือ      ");
+		t8.setText("ขาดทุน              " + percent + "% หรือ      ");
+		t7.setText("เปลี่ยนแปลงราคาขาย:   ");
 		t16.setText("" + baht);
 		return null;
 
@@ -135,7 +136,7 @@ public class Calculated extends Activity implements OnClickListener {
 
 			break;
 		case R.id.btnclose:
-			finish();			
+			finish();
 		default:
 			break;
 		}
