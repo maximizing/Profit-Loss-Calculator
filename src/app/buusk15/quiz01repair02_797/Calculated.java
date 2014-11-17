@@ -1,6 +1,7 @@
 package app.buusk15.quiz01repair02_797;
 
 import java.text.DecimalFormat;
+import java.text.NumberFormat;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -95,6 +96,7 @@ public class Calculated extends Activity implements OnClickListener {
 		baht = cost1 - cost2; //เปลี่ยนแปลงราคาขาย
 		percent = (baht / cost1) * 100; 
 
+		
 		t1.setText("ผลการคำควณ: ");
 		t2.setText("มูลค่าซื้อ:    " + e1 + " x " + e2 + "  =     ");
 		t10.setText("" + result1);
@@ -108,7 +110,12 @@ public class Calculated extends Activity implements OnClickListener {
 		t14.setText("" + con);
 		t7.setText("คิดเป็นค่าขายสุทธิ:   ");
 		t15.setText("" + cost2);
-		t8.setText("ขาดทุน              " + percent + "% หรือ      ");
+//		t8.setText("ขาดทุน              " + percent + "% หรือ      ");
+		NumberFormat format = NumberFormat.getInstance();
+		format.setMaximumFractionDigits(2);
+		t8.setText("ขาดทุน              " + format.format(percent) + "% หรือ      ");
+		
+		
 		t7.setText("เปลี่ยนแปลงราคาขาย:   ");
 		t16.setText("" + baht);
 		return null;
